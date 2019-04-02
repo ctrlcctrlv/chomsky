@@ -1,0 +1,73 @@
+languagesystem DFLT dflt;
+languagesystem latn dflt;
+
+feature dlig {
+    lookup dlig1 {
+        sub s t by st.dlig;
+        sub n d by nd.dlig;
+        sub r d by rd.dlig;
+        sub t h by th.dlig;
+    } dlig1;
+} dlig;
+
+@i = [i dotlessi];
+@j = [j dotlessj];
+@lower = [a b c d e f g h @i @j k l m n o p q r s t u v w x y z];
+@lower_ligas = [f_f f_l f_f_l f_i f_f_i];
+@lowerA = [@lower @lower_ligas];
+@upper = [A B C D E F G H I J K L M N O P Q R S T U V W X Y Z];
+@lower_no_f = [a b c d e g h @i @j k l m n o p q r s t u v w x y z];
+@upper_no_f = [A B C D E G H I J K L M N O P Q R S T U V W X Y Z];
+@upper_no_f_N = [A B C D E G H I J K L M O P Q R S T U V W X Y Z];
+@f_lowers = [a c e g m n o p q s u v w x y z];
+@a = [a];
+@r = [r];
+@f = [f longs];
+@upper_groupC = [Q T R N F K];
+
+feature liga {
+    sub f l by f_l;
+    sub f i by f_i;
+    sub f f by f_f;
+    sub f f l by f_f_l;
+    sub f f i by f_f_i;
+} liga;
+
+feature kern {
+    # Kerns which affect large groups
+    pos @lowerA @lowerA -30; # (A)
+    pos @lowerA [c] 10;
+    pos @lowerA [s] 5;
+    pos @upper_groupC @lowerA -30;
+
+    # Kerns which affect specific letters
+    pos N @f_lowers -80;
+    pos T @lowerA 10;
+    pos [f f_f] [@f_lowers r] -110;
+    pos F @f_lowers -110;
+    pos F @r -90;
+    pos [@lower_no_f @upper_no_f_N] @a 10; # (B) This partially cancels out (A)
+    #pos [@r] @a -65;
+    pos [t] @a -45;
+    pos @a [n m] -45;
+    pos [n m] @a -20;
+    pos [b o] [q d] 30;
+    pos [S o e] [c d e] 30;
+    pos [b o] @lowerA 10;
+    pos e @a -15;
+    pos [S s] @lowerA 15;
+    pos [S] [c] 50;
+    pos [o] [d] 50;
+    pos [@a l r] [d] 30;
+
+    # This is mostly for handling many repeating `f`'s, as in, "Oofffff!"
+    pos [f_f] [@f f_f f_l f_f_l f_i f_f_i] -185;
+    pos [@f]  [@f f_f f_l f_f_l f_i f_f_i] -175;
+} kern;
+
+#markClass [gravecomb acutecomb tildecomb] <anchor 273 353> @mark_top;
+#feature mark {
+#    lookup mark1 {
+#        pos base [a n] <anchor 307 573> mark @mark_top;
+#    } mark1;
+#} mark;
