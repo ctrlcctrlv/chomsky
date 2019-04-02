@@ -57,7 +57,7 @@ feature kern {
     pos e @a -15;
     pos [S s] @lowerA 15;
     pos [S] [c] 50;
-    pos [o] [d] 50;
+    pos [o] [c d] 50;
     pos [@a l r] [d] 30;
 
     # This is mostly for handling many repeating `f`'s, as in, "Oofffff!"
