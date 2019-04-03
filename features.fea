@@ -54,6 +54,7 @@ feature kern {
     pos [n m] @a -20;
     pos [b o] [q d] 30;
     pos [S o e] [c d e] 30;
+    pos [e] [e] -30;
     pos [b o] @lowerA 10;
     pos e @a -15;
     pos [S s] @lowerA 15;
