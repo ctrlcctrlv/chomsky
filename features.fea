@@ -43,7 +43,8 @@ feature kern {
     # Kerns which affect specific letters
     pos N @f_lowers -80;
     pos T @lowerA 10;
-    pos [f f_f] [@f_lowers r] -110;
+    pos [f f_f] [@f_lowers r t] -110;
+    pos [f f_f] space -80;
     pos F @f_lowers -110;
     pos F @r -90;
     pos [@lower_no_f @upper_no_f_N] @a 10; # (B) This partially cancels out (A)
