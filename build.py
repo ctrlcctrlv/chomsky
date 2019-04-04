@@ -30,21 +30,17 @@ names = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight",
 subs = ["\u2070", "\u00b9", "\u00b2", "\u00b3"]+[chr(i) for i in range(ord("\u2074"), ord("\u207a"))]
 sups = [chr(i) for i in range(ord("\u2080"), ord("\u208a"))]
 
-for i, e in enumerate(subs):
+fn = """
+for i, e in enumerate(su{0}s):
     n = names[i]
-    font.selection.select(font.findEncodingSlot(n+".sub"))
+    font.selection.select(font.findEncodingSlot(n+".su{0}"))
     font.copyReference()
     font.createChar(ord(e))
     font.selection.select(ord(e))
     font.paste()
-
-for i, e in enumerate(sups):
-    n = names[i]
-    font.selection.select(font.findEncodingSlot(n+".sup"))
-    font.copyReference()
-    font.createChar(ord(e))
-    font.selection.select(ord(e))
-    font.paste()
+"""
+exec(fn.format("b"))
+exec(fn.format("p"))
 
 font.selection.select(("unicode","ranges"),0xE000,0xE0FF)
 font.clear()
