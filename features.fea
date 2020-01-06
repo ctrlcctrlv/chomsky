@@ -84,39 +84,39 @@ feature liga {
     sub f f i by f_f_i;
 } liga;
 
-feature kern {
-    # Kerns which affect large groups
-    pos @lowerA @lowerA -30; # (A)
-    pos @lowerA [@c] 10;
-    pos @lowerA [@s] 5;
-    pos @upper_groupC @lowerA -30;
-
-    # Kerns which affect specific letters
-    pos @N @f_lowers -80;
-    pos @T @lowerA 10;
-    pos [@f f_f] [@f_lowers @r @t] -110;
-    pos [@f f_f] space -80;
-    pos @F @f_lowers -110;
-    pos @F @r -90;
-    pos [@lower_no_f @upper_no_f_N] @a 10; # (B) This partially cancels out (A)
-    #pos [@r] @a -65;
-    pos [@t] @a -45;
-    pos @a [@n @m] -45;
-    pos [@n @m] @a -20;
-    pos [@b @o] [@q @d] 30;
-    pos [@S @o @e] [@c @d @e] 30;
-    pos [@e] [@e] -30;
-    pos [@b @o] @lowerA 10;
-    pos @e @a -15;
-    pos [@S @s] @lowerA 15;
-    pos [@S] [@c] 50;
-    pos [@o] [@c @d] 50;
-    pos [@a @l @r] [@d] 30;
-
-    # This is mostly for handling many repeating `f`'s, as in, "Oofffff!"
-    pos [f_f] [@f f_f f_l f_f_l f_i f_f_i] -185;
-    pos [@f]  [@f f_f f_l f_f_l f_i f_f_i] -175;
-} kern;
+#feature kern {
+#    # Kerns which affect large groups
+#    pos @lowerA @lowerA -30; # (A)
+#    pos @lowerA [@c] 10;
+#    pos @lowerA [@s] 5;
+#    pos @upper_groupC @lowerA -30;
+#
+#    # Kerns which affect specific letters
+#    pos @N @f_lowers -80;
+#    pos @T @lowerA 10;
+#    pos [@f f_f] [@f_lowers @r @t] -110;
+#    pos [@f f_f] space -80;
+#    pos @F @f_lowers -110;
+#    pos @F @r -90;
+#    pos [@lower_no_f @upper_no_f_N] @a 10; # (B) This partially cancels out (A)
+#    #pos [@r] @a -65;
+#    pos [@t] @a -45;
+#    pos @a [@n @m] -45;
+#    pos [@n @m] @a -20;
+#    pos [@b @o] [@q @d] 30;
+#    pos [@S @o @e] [@c @d @e] 30;
+#    pos [@e] [@e] -30;
+#    pos [@b @o] @lowerA 10;
+#    pos @e @a -15;
+#    pos [@S @s] @lowerA 15;
+#    pos [@S] [@c] 50;
+#    pos [@o] [@c @d] 50;
+#    pos [@a @l @r] [@d] 30;
+#
+#    # This is mostly for handling many repeating `f`'s, as in, "Oofffff!"
+#    pos [f_f] [@f f_f f_l f_f_l f_i f_f_i] -185;
+#    pos [@f]  [@f f_f f_l f_f_l f_i f_f_i] -175;
+#} kern;
 
 #markClass [gravecomb acutecomb tildecomb] <anchor 273 353> @mark_top;
 #feature mark {
