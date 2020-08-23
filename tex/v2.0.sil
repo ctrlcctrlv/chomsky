@@ -1,0 +1,21 @@
+\begin[papersize=9.5cm x 8cm]{document}
+\script[src=packages/verbatim]
+\neverindent\nofolios
+\set[parameter=font.filename,value=../dist/Chomsky.otf,makedefault=true]
+\set[parameter=font.size,value=12,makedefault=true]
+\obeylines{
+New in version 2.0:
+
+Fredrick Brennan:
+* Fixed spacing dieresis (¨), which was 0-width;
+\kern[width=0.33em] * also spacing macron (¯), ditto
+* Slightly tweaked width of `s`;
+* Try to better balance `tildecomb` (ñõm̃).
+  
+Nikita Moor:
+* Gave `m` a top mark anchor (m̃m̂ḿ);
+* Drew a combining e above (mͤiͤ);
+* Drew an r-rotunda (ꝛ)
+* Drew an alternate double oblique hyphen (\font[features=+salt]{-}).
+}
+\end{document}

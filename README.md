@@ -5,6 +5,8 @@ Chomsky: New York Times masthead, reimagined as a full font
 
 ![Info](https://raw.githubusercontent.com/ctrlcctrlv/chomsky/master/tex/chomsky.png)
 
+![2.0 info](https://raw.githubusercontent.com/ctrlcctrlv/chomsky/master/tex/v2.0.png)
+
 The below text is for screen readers and search engines
 =======================================================
 This is Chomsky, a newspaper masthead font in the style of the New York Times masthead.

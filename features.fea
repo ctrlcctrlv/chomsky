@@ -84,6 +84,15 @@ feature liga {
     sub f f i by f_f_i;
 } liga;
 
+feature salt {
+    sub hyphen by uni2E17.alt;
+    sub uni2E17 by uni2E17.alt;
+} salt;
+
+feature ccmp {
+    sub [i j]' uni0364 by [dotlessi dotlessj];
+} ccmp;
+
 #feature kern {
 #    # Kerns which affect large groups
 #    pos @lowerA @lowerA -30; # (A)
