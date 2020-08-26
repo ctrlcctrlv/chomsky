@@ -133,3 +133,12 @@ feature ccmp {
 #        pos base [a n] <anchor 307 573> mark @mark_top;
 #    } mark1;
 #} mark;
+
+@roundlc = [ @b @d @h @o @p eth thorn ];
+
+feature calt {
+  lookup calt1 {
+    lookupflag 0;
+    sub [ @roundlc ] [\r ]' by [\uniA75B ];
+  } calt1;
+} calt;
