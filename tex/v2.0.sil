@@ -1,9 +1,17 @@
-\begin[papersize=9.5cm x 8cm]{document}
+\begin[papersize=10.5cm x 8cm]{document}
 \script[src=packages/verbatim]
+\script[src=packages/rebox]
 \neverindent\nofolios
 \set[parameter=font.filename,value=../dist/Chomsky.otf,makedefault=true]
 \set[parameter=font.size,value=12,makedefault=true]
-\obeylines{
+\obeylines{\font[features=+salt]{
+New in version 2.1:
+
+Mark Shoulson:
+* Added ƿ and Ƿ
+* Added `hist` feature automatically enabling Nikita's r-rotunda. E.g.:
+\kern[width=0.33em]\rebox[phantom=y]{ *} \font[features=+hist]{New York, Newark, Madrid}
+
 New in version 2.0:
 
 Fredrick Brennan:
@@ -16,6 +24,6 @@ Nikita Moor:
 * Gave `m` a top mark anchor (m̃m̂ḿ);
 * Drew a combining e above (mͤiͤ);
 * Drew an r-rotunda (ꝛ)
-* Drew an alternate double oblique hyphen (\font[features=+salt]{-}).
-}
+* Drew an alternate double oblique hyphen (-).
+}}
 \end{document}
