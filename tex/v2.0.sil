@@ -1,4 +1,4 @@
-\begin[papersize=10.5cm x 8cm]{document}
+\begin[papersize=9.5cm x 11cm]{document}
 \script[src=packages/verbatim]
 \script[src=packages/rebox]
 \neverindent\nofolios
