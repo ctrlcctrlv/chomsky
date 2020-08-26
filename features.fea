@@ -136,9 +136,9 @@ feature ccmp {
 
 @roundlc = [ @b @d @h @o @p eth thorn ];
 
-feature calt {
-  lookup calt1 {
+feature hist {
+  lookup hist1 {
     lookupflag 0;
     sub [ @roundlc ] [\r ]' by [\uniA75B ];
-  } calt1;
-} calt;
+  } hist1;
+} hist;
