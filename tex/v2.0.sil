@@ -9,7 +9,7 @@ New in version 2.1:
 
 Mark Shoulson:
 * Added ƿ and Ƿ
-* Added `hist` feature automatically enabling Nikita's r-rotunda. E.g.:
+* Added `hist` feature automatically enabling Nikita's r rotunda. E.g.:
 \kern[width=0.33em]\rebox[phantom=y]{ *} \font[features=+hist]{New York, Newark, Madrid}
 
 New in version 2.0:
@@ -23,7 +23,7 @@ Fredrick Brennan:
 Nikita Moor:
 * Gave `m` a top mark anchor (m̃m̂ḿ);
 * Drew a combining e above (mͤiͤ);
-* Drew an r-rotunda (ꝛ)
+* Drew an r rotunda (ꝛ)
 * Drew an alternate double oblique hyphen (-).
 }}
 \end{document}
