@@ -1,0 +1,26 @@
+\begin[papersize=9.5cm x 11cm]{document}
+\script[src=packages/verbatim]
+\script[src=packages/rebox]
+\neverindent\nofolios
+\set[parameter=font.filename,value=../dist/Chomsky.otf,makedefault=true]
+\set[parameter=font.size,value=12,makedefault=true]
+\obeylines{\font[features=+salt]{
+New in version 2.2:
+
+* Redrew all glyphs with regular cubic contours, leading to smaller filesize
+* Added \font[features=+dlig]{of}, \font[features=+dlig]{and} and \font[features=+dlig]{the} discretionary ligatures (OT `dlig`)
+ 
+New in version 2.3:
+* Added ə and Ə (schwa's). Example sentence from Azerbaijani Wikipedia:
+\font[size=0.8em]{
+Ərəb dili tarixən üç inkişaf mərhələsi keçmişdir
+ƏRƏB DILI TARIXƏN ÜÇ INKIŞAF MƏRHƏLƏSI …
+}
+* Added kerning for all caps, and subtituted spaces for bigger ones in all caps. Example:
+\font[size=0.8em]{
+THIS IS CHOMSKY VERSION 2.3 ALL CAPS KERNING
+}
+This font was never designed for all caps use, and such use remains recommended against, but won't look as bad now.
+}}
+* Some capital letters now shorter to match their peers. Examples: K, V, W, X.
+\end{document}

@@ -11,7 +11,7 @@ Mark Shoulson:
 * Added ƿ and Ƿ
 * Added `hist` feature automatically enabling Nikita's r rotunda. E.g.:
 \kern[width=0.33em]\rebox[phantom=y]{ *} \font[features=+hist]{New York, Newark, Madrid}
-
+ 
 New in version 2.0:
 
 Fredrick Brennan:
@@ -19,7 +19,7 @@ Fredrick Brennan:
 \kern[width=0.33em] * also spacing macron (¯), ditto
 * Slightly tweaked width of `s`;
 * Try to better balance `tildecomb` (ñõm̃).
-  
+
 Nikita Moor:
 * Gave `m` a top mark anchor (m̃m̂ḿ);
 * Drew a combining e above (mͤiͤ);

@@ -6,6 +6,7 @@ Chomsky: New York Times masthead, reimagined as a full font
 ![Info](https://raw.githubusercontent.com/ctrlcctrlv/chomsky/master/tex/chomsky.png)
 
 ![2.0 info](https://raw.githubusercontent.com/ctrlcctrlv/chomsky/master/tex/v2.0.png)
+![2.3 info](https://raw.githubusercontent.com/ctrlcctrlv/chomsky/master/tex/v2.2.png)
 
 The below text is for screen readers and search engines
 =======================================================

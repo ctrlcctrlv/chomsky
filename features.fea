@@ -69,15 +69,11 @@ feature dlig {
 @V = [V];
 @X = [X];
 
-@lower = [@a @b @c @d @e @f @g @h @i @j @k @l @m @n @o @p @q @r @s @t @u @v @w @x @y @z];
+@lower = [@a @b @c @d @e @f @g @h @i @j @k @l @m @n @o @p @q @r @s @t @u @v @w @x @y @z schwa];
 @lower_ligas = [f_f f_l f_f_l f_i f_f_i];
 @lowerA = [@lower @lower_ligas];
-@upper = [@A @B @C @D @E @F @G @H @I @J @K @L @M @N @O @P @Q @R @S @T @U @V @W @X @Y @Z];
-@lower_no_f = [@a @b @c @d @e @g @h @i @j @k @l @m @n @o @p @q @r @s @t @u @v @w @x @y @z];
-@upper_no_f = [@A @B @C @D @E @G @H @I @J @K @L @M @N @O @P @Q @R @S @T @U @V @W @X @Y @Z];
-@upper_no_f_N = [@A @B @C @D @E @G @H @I @J @K @L @M @O @P @Q @R @S @T @U @V @W @X @Y @Z];
-@f_lowers = [@a @c @e @g @m @n @o @p @q @s @u @v @w @x @y @z];
-@upper_groupC = [@Q @T @R @N @F @K];
+@upper = [@A @B @C @D @E @F @G @H @I @J @K @L @M @N @O @P @Q @R @S @T @U @V @W @X @Y @Z Schwa];
+@digit = [zero one two three four five six seven eight nine];
 
 feature liga {
     sub f l by f_l;
@@ -105,3 +101,11 @@ feature hist {
     sub @roundlc r' by uniA75B;
   } hist1;
 } hist;
+
+feature kern {
+  lookup kernsub {
+    lookupflag IgnoreMarks;
+    sub [@digit @upper] space' @upper by enspace;
+    sub @upper space' [@digit @upper] by enspace;
+  } kernsub;
+} kern;
